@@ -25,7 +25,7 @@ jobs:
            echo "Starting kernel build for << pipeline.parameters.device >>"
            echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
            git clone -b scripts https://github.com/iamsaalim/sb-scripts
-           cd scripts
+           cd sb-scripts
            source build.sh $DEVICE $BRANCH
 workflows:
   version: 2.1

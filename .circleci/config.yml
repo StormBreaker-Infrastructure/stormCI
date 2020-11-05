@@ -23,6 +23,7 @@ jobs:
            git config --global color.ui false
            git clone https://github.com/akhilnarang/scripts && cd scripts && bash setup/android_build_env.sh && cd ..
            echo "Starting kernel build for << pipeline.parameters.device >>"
+           echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
            git clone -b scripts https://github.com/iamsaalim/sb-scripts
            cd scripts
            source build.sh $DEVICE $BRANCH

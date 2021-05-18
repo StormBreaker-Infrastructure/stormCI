@@ -25,3 +25,5 @@ steps:
       - git config --global color.ui false
       - echo $DEVICE
       - echo $BRANCH
+      - echo $device
+      - echo $branch

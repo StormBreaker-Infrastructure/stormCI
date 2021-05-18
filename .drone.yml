@@ -1,0 +1,15 @@
+kind: pipeline
+name: stormCI
+
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  depth: 1
+
+steps:
+  - name: setup&kramel
+    image: starlight2834/ci_docker:latest
+    commands:
+      - echo "Testing if it works."

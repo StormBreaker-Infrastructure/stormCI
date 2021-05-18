@@ -1,4 +1,5 @@
 kind: pipeline
+type: docker
 name: stormCI
 
 platform:
@@ -11,9 +12,9 @@ clone:
 steps:
   - name: setup&kramel
     image: starlight2834/ci_docker:latest
-  environment:
-    GITHUB_TOKEN:
-      from_secret: github_token
+    environment:
+      GITHUB_TOKEN:
+        from_secret: github_token
     commands:
       - cd $HOME
       - git config --global user.name "danascape"

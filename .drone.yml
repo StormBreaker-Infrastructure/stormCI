@@ -11,13 +11,6 @@ clone:
 steps:
   - name: setup&kramel
     image: starlight2834/ci_docker:latest
-    environment:
-      BRANCH:
-        from_secret: branch
-      DEVICE:
-        from_secret: device
-      GITHUB_TOKEN:
-        from_secret: git
     commands:
       - cd $HOME
       - git config --global user.name "danascape"

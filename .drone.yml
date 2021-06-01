@@ -20,6 +20,6 @@ steps:
       - git config --global user.email "danascape@gmail.com"
       - git config --global color.ui false
       - apt update && apt-get install -y build-essential bc python curl git zip ftp gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev lftp zstd wget libfl-dev clang flex bison cpio
-      - git clone https://danascape:$GITHUB_TOKEN@github.com/danascape/sb-scripts
+      - git clone https://danascape:$GITHUB_TOKEN@github.com/stormbreaker-project/sb-scripts
       - cd sb-scripts
-      - bash build.sh $DEVICE $BRANCH
+      - bash build-kernel.sh $DEVICE $BRANCH
